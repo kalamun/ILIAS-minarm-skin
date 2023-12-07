@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding:0;
+	margin:0;
+	overflow-x: hidden;
+}
+
+body {
+	line-height: 1.4em;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	overflow-x: hidden;
+	--border-radius: 3px;
+	--border-radius-large: 8px;
+}
+
+ol, ul {
+	padding-left: 2em;
+}
+
+li {
+	margin: .3em;
+}
+
+blockquote {
+	quotes: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+table {
+	border-style: none;
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 0;
+	max-width: 100% ;
+}
+
+table td {
+	padding: 2px;
+	vertical-align: top;
+}
+
+img,
+object,
+iframe,
+figure {
+	vertical-align: middle;
+	border: 0;
+	max-width: 100%;
+	height:auto;
+}
+
+iframe {
+	max-width: 100% ;
+}
+
+.sr-only {
+    display: none;
+}
+
+
+/* forms */
+label, input, select, button {
+	cursor: pointer;
+}
+
+.form-control {
+  height: auto;
+  padding: 9px 9px;
+  font-size: 1em;
+  color: #161616;
+  border: 1px solid var(--color-xxlight-blue);
+  border-radius: var(--border-radius);
+  background: var(--color-xxxlight-blue);
+  resize: none;
+}
+
+.btn {
+	border: 0;
+	border-radius: var(--border-radius);
+	padding: 0.5em 1em;
+	border: 2px solid;
+}
+.btn-default {
+  background: transparent !important;
+  color: var(--color-blue) !important;
+	border-color: var(--color-blue) !important;
+}
+.btn-primary {
+	color: var(--color-white) !important;
+	background-color: var(--color-blue) !important;
+	border-color: var(--color-blue) !important;
+}
