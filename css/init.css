@@ -78,6 +78,9 @@ iframe {
 label, input, select, button {
 	cursor: pointer;
 }
+input[type]:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]) {
+	cursor: text;
+}
 
 .form-control {
   height: auto;
@@ -90,19 +93,3 @@ label, input, select, button {
   resize: none;
 }
 
-.btn {
-	border: 0;
-	border-radius: var(--border-radius);
-	padding: 0.5em 1em;
-	border: 2px solid;
-}
-.btn-default {
-  background: transparent !important;
-  color: var(--color-blue) !important;
-	border-color: var(--color-blue) !important;
-}
-.btn-primary {
-	color: var(--color-white) !important;
-	background-color: var(--color-blue) !important;
-	border-color: var(--color-blue) !important;
-}

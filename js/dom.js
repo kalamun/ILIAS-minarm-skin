@@ -6,8 +6,6 @@ function initMenu() {
     for ( const element of document.querySelectorAll('.il-mainbar .dci-mainbar-li-submenu a.il-link.link-bulky')) {
         element.parentNode.removeChild(element);
     }
-    document.querySelector('.metabar .dci-mainbar-li.search button')?.addEventListener('click', openSearch);
-    document.querySelector('.metabar .dci-mainbar-li.search #mm_search_form > .input-group input')?.addEventListener('blur', closeSearch);
 
     const mainbar = document.querySelector('.il-mainbar');
     const headerMenu = document.querySelector('.header-menu');
@@ -43,14 +41,33 @@ function initSlates() {
 
     const closeSlates = document.querySelector('.il-mainbar-close-slates');
     if (closeSlates) closeSlates.parentNode.removeChild(closeSlates);
+
+    
+    if (document.querySelector('header .il-mainbar-tools-button')) {
+/*         document.querySelector('header')?.classList.add('disabled');        
+        document.querySelector('.copg-top-actions button')?.classList.remove('btn-default').add('btn-primary');        
+ */
+} else {
+}
+    window.addEventListener('click', closeAllOpenMenu, true);
+    persistToolBar();
 }
 
-function openSearch() {
-    const container = document.querySelector('.metabar .dci-mainbar-li.search #mm_search_form > .input-group');
-    container?.classList.add('open');
-    container?.querySelector('input')?.focus();
+function closeAllOpenMenu() {
+    document.querySelectorAll('header li > .btn.engaged').forEach(button => button.click());
+    persistToolBar();
 }
-function closeSearch() {
-    document.querySelector('.metabar .dci-mainbar-li.search #mm_search_form > .input-group')?.classList.remove('open');
+
+function persistToolBar() {
+    const tools = document.querySelector('.nav.il-maincontrols .il-maincontrols-slate.disengaged');
+    if (tools) {
+        console.log({tools});
+        tools?.classList.remove('disengaged');
+        tools?.classList.add('engaged');
+        const toolsWrapper = document.querySelector('.nav.il-maincontrols.disengaged');
+        toolsWrapper?.classList.remove('disengaged');
+        toolsWrapper?.classList.add('engaged');
+
+    }
 }
 

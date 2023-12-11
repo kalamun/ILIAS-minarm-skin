@@ -3,7 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
 <style type="text/css">
-	.st0{clip-path:url(#SVGID_00000055670547035609721530000013545258826716744382_);fill:#4C6586;}
+	.st0{clip-path:url(#SVGID_00000055670547035609721530000013545258826716744382_);fill:#000091;}
 </style>
 <g>
 	<g>
@@ -13,7 +13,7 @@
 		<clipPath id="SVGID_00000164483988432058247990000012276147518454836912_">
 			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 		</clipPath>
-		<path style="clip-path:url(#SVGID_00000164483988432058247990000012276147518454836912_);fill:#4C6586;" d="M70,240l-20,15h220
+		<path style="clip-path:url(#SVGID_00000164483988432058247990000012276147518454836912_);fill:#000091;" d="M70,240l-20,15h220
 			l-20-15H70z M179.4,126.2L168,138.8l31.6,28.5l0,0h0.4l40.6-54.4L227,102.7l-29.8,39.6L179.4,126.2z M150,155h-15v15h15V155z
 			 M150,127.5h-15v15h15V127.5z M150,100h-15v15h15V100z M100,155H85v15h15V155z M100,127.5H85v15h15V127.5z M100,100H85v15h15V100z
 			 M255,200.4H65v-120h190V200.4z M270,213V68.9c0,0,0-4.3-4.3-4.3H54.3c0,0-4.3,0-4.3,4.3V213c0,0,0,4.3,4.3,4.3h211.4

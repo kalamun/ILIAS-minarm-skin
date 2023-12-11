@@ -3,7 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
 <style type="text/css">
-	.st0{clip-path:url(#SVGID_00000042001190868933743680000005594401854895680904_);fill:#4C6586;}
+	.st0{clip-path:url(#SVGID_00000042001190868933743680000005594401854895680904_);fill:#000091;}
 </style>
 <g>
 	<g>
@@ -13,7 +13,7 @@
 		<clipPath id="SVGID_00000013171603123207640680000013456768307788618686_">
 			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 		</clipPath>
-		<path style="clip-path:url(#SVGID_00000013171603123207640680000013456768307788618686_);fill:#4C6586;" d="M115,150H80v15h35V150
+		<path style="clip-path:url(#SVGID_00000013171603123207640680000013456768307788618686_);fill:#000091;" d="M115,150H80v15h35V150
 			z M115,122.5H80v15h35V122.5z M115,95H80v15h35V95z M255,200.4H65v-120h190V200.4z M270,213V68.9c0,0,0-4.3-4.3-4.3H54.3
 			c0,0-4.3,0-4.3,4.3V213c0,0,0,4.3,4.3,4.3h88.4v23.4h-19.4v14.7h73.3v-14.7h-19.4v-23.4h88.4C265.7,217.3,270,217.3,270,213"/>
 	</g>

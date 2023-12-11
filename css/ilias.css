@@ -13,13 +13,16 @@
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     background-color: var(--color-xxxlight-blue);
-    color: var(--color-dark-blue);
+    color: var(--color-xdark-blue);
     border: 0 none;
     border-radius: var(--border-radius);
     padding: 0.5em 1em;
 }
 .nav-tabs > li > a:hover {
     border-color: transparent;
+}
+#ilSubTab > li.active > :is(a, a:hover, a:focus) {
+    color: var(--color-xdark-blue);
 }
 .nav > li > a:hover, .nav > li > a:focus {
     background-color: transparent;
@@ -30,40 +33,141 @@
 
 
 /* dropdown */
+
 ul.dropdown-menu {
     border-radius: var(--border-radius-large);
     padding: 0;
     overflow: hidden;
+    font-size: var(--font-size-xxsmall);
+    box-shadow: var(--box-shadow);
 }
 ul.dropdown-menu > li {
     padding: 0;
     border-bottom: 1px solid var(--color-xxxlight-blue);
     margin: 0;
+    font-size: var(--font-size-xxsmall);
 }
 ul.dropdown-menu > li:last-of-type {
     border-bottom: 0;
 }
-ul.dropdown-menu > li a {
+ul.dropdown-menu > li :is(a, .btn) {
     padding: 7px 12px;
+    font-size: var(--font-size-xxsmall);
 }
-ul.dropdown-menu > li a:hover {
+ul.dropdown-menu > li > .btn {
+    border: 0;
+    font-size: var(--font-size-xxsmall);
+}
+ul.dropdown-menu > li :is(a, .btn):hover {
     color: var(--color-light-blue);
     background: var(--color-xxxlight-blue);
+    text-decoration: underline;
+}
+
+
+/* dropdown add new item */
+
+@media only screen and (min-width: 1200px) {
+    #ilAdvSelListAnchorText_asl + ul.dropdown-menu > li > div.row {
+        min-width: 1100px;
+        display: flex;
+        gap: 1rem;
+    }
+}
+#ilAdvSelListAnchorText_asl + ul.dropdown-menu > li > div.row ul {
+    min-width: auto;
+    flex: 1;
+}
+
+
+/* buttons */
+
+.btn {
+  border: 0;
+  border-radius: 0;
+  padding: 0.5em 1em;
+  border: 2px solid;
+}
+.btn-default {
+  background: transparent !important;
+  color: var(--color-xdark-blue) !important;
+  border-color: var(--color-xdark-blue) !important;
+}
+.btn-primary,
+.btn-default[type="submit"] {
+	color: var(--color-white) !important;
+	background-color: var(--color-xdark-blue) !important;
+	border-color: var(--color-xdark-blue) !important;
+}
+.btn-group button.btn.engaged {
+  background: var(--color-blue) !important;
+  color: var(--color-white) !important;
+}
+:not(.btn-group) > .btn.dropdown-toggle,
+.il-viewcontrol-section a {
+  padding: 0.1em 0.5em;
+}
+
+
+/* tables */
+
+.table > thead > tr > th {
+    font-size: var(--font-size-xsmall);
+}
+a.tblheader,
+a.tblheader:visited {
+    background: transparent;
+    color: var(--color-blue);
+}
+a.tblheader:hover {
+    background: transparent;
+    color: var(--color-light-blue);
+}
+
+div.ilTableNav td {
+    vertical-align: center;
+}
+div.ilTableNav .btn,
+div.ilTableNav .btn-group {
+    border: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+td.std.small input {
+    border: 1px solid var(--color-xlight-blue);
+    font-size: var(--font-size-xxsmall);
+    text-align: center;
 }
 
 /* other */
 
-#il_center_col .panel .panel-heading:is(.ilHeader, .ilBlockHeader) {
+#il_center_col .panel,
+#il_center_col .ilContainerBlock {
+    border: none;
+}
+#ilContentContainer .panel .panel-heading:is(.ilHeader, .ilBlockHeader),
+#ilContentContainer div.ilContainerBlockHeader {
     border-bottom: 1px solid var(--color-xlight-grey);
     background-color: transparent;
 }
-#il_center_col .panel {
-    border: none;
+#ilContentContainer .ilContainerBlock {
+    border: 0;
+    padding: 0;
+}
+#ilContentContainer h2.ilContainerBlockHeader {
+    background-color: transparent;
 }
 
 .alert-info {
     color: var(--color-red);
     background-color: var(--color-xxxlight-red);
     border-color: var(--color-xxxlight-red);
+}
+
+
+/* page items */
+
+div.ilContainerListItemOuter {
+    padding: 1.5em 15px;
 }
 

@@ -9,6 +9,11 @@ body {
 }
 
 /* header */
+header.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
 .header-inner {
     position: relative;
     height: auto;
@@ -31,10 +36,9 @@ body {
     font-size: var(--font-size-small);
 }
 
+
 /* top menu - right */
-#ilMMSearchMenu {
-    display: none;
-}
+
 .metabar > ul {
     list-style: none;
     padding: 0;
@@ -50,44 +54,70 @@ header .metabar .icon {
     color: var(--color-grey);
     font-size: 1.2em;
 }
-
-.metabar .dci-mainbar-li.search {
-    display: flex;
+header .il-maincontrols-metabar .btn {
+    border: 0;
 }
-.metabar .dci-mainbar-li.search :is(#ilMMSearchMenu, #mm_search_menu_ac) {
-    display: none;
-}
-.metabar .dci-mainbar-li.search #mm_search_form {
-    display: flex;
-    align-items: center;
-}
-.metabar .dci-mainbar-li.search #mm_search_form input[type="submit"] {
-    display: none;
-}
-.metabar .dci-mainbar-li.search #mm_search_form > .input-group {
-    width: 0;
-    overflow: hidden;
-    transition: width 0.3s ease-in-out;
-    margin-left: -1.5em;
-}
-.metabar .dci-mainbar-li.search #mm_search_form > .input-group.open {
-    width: 200px;
-}
-.metabar .dci-mainbar-li.search #mm_search_form > .input-group input {
-    width: 100%;
-    padding-left: 2em;
-    z-index: -1;
+header .il-maincontrols-metabar li {
     position: relative;
+}
+header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
+    min-width: 400px;
+    z-index: 1000;
+}
+
+/* searchbar */
+
+#ilMMSearchMenu {
+    display: none;
+}
+.header-inner li.search {
+    display: flex;
+}
+.header-inner li.search > button {
+    display: none !important;
+}
+.header-inner li.search :is(#ilMMSearchMenu, #mm_search_menu_ac) {
+    display: none;
+}
+.header-inner li.search #mm_search_form .input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 300px;
+}
+.header-inner li.search #mm_search_form .input-group-btn {
+    flex-grow: 2;
+}
+.header-inner li.search #mm_search_form button {
+    background: var(--color-xdark-blue);
+    color: var(--color-white);
+    padding: 5px 10px;
+    border-top-right-radius: var(--border-radius-large);
+    width: 100%;
+    height: 100%;
+}
+.header-inner li.search #mm_search_form button .glyphicon {
+    filter: none;
+}
+.header-inner li.search #mm_search_form > .input-group input {
+    min-width: 0;
+    position: relative;
+    background: var(--color-xxlight-grey);
+    border: 0;
+    border-bottom: 2px solid var(--color-xdark-blue);
+    border-radius: 0;
+    border-top-left-radius: var(--border-radius-large);
+    padding: 0.3em 1em;
 }
 
 .il-avatar.il-avatar-letter {
-    background-color: var(--color-blue);
-    border-color: var(--color-xlight-grey);
-    color: var(--color-white);
+    background-color: var(--color-xdark-blue) !important;
+    border-color: var(--color-xlight-grey) !important;
+    color: var(--color-white) !important;
 }
 .il-avatar {
-    height: 4em;
-    width: 4em;
+    height: 5em;
+    width: 5em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -99,6 +129,7 @@ header .metabar .icon {
 }
 .il-avatar.il-avatar-letter span.abbreviation {
     text-transform: uppercase;
+    top: 0;
 }
 .il-avatar + .bulky-label {
     display: none;
@@ -107,7 +138,7 @@ header .metabar .icon {
 
 /* header navbar */
 .header-menu {
-    border-top: 1px solid var(--color-xxxlight-blue);
+    border-top: 1px solid var(--color-light-grey);
     padding: 0 12px;
     box-shadow: var(--box-shadow);
 }
@@ -126,7 +157,7 @@ header .metabar .icon {
 .header-menu .il-mainbar-triggers :is(.btn-bulky, .il-link.link-bulky, .btn-bulky:hover, .il-link.link-bulky:hover) {
     background: transparent;
     color: var(--color-black);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-xsmall);
     display: flex;
     white-space: nowrap;
     flex-direction: row;
@@ -135,10 +166,13 @@ header .metabar .icon {
     gap: 0.5em;
     height: auto;
     border: 0;
-    padding: 10px;
+    padding: 15px;
 }
 .header-menu .il-mainbar-triggers :is(.btn-bulky, .il-link.link-bulky).engaged {
-    background: var(--color-xxxlight-grey) !important;
+    background: var(--color-xxxlight-blue) !important;
+}
+.header-menu .il-mainbar-triggers :is(.btn-bulky, .il-link.link-bulky).engaged span {
+    color: var(--color-xdark-blue);
 }
 .header-menu .il-mainbar-triggers :is(.btn-bulky, .il-link.link-bulky) > img {
     display: none;
@@ -148,6 +182,7 @@ header .metabar .icon {
 }
 .header-menu .il-mainbar-entries li {
     position: relative;
+    margin: 0;
 }
 .header-menu .il-mainbar-entries li > div {
     position: absolute;
@@ -157,6 +192,16 @@ header .metabar .icon {
     background: var(--color-white);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius-large);
+}
+.header-menu .il-mainbar-triggers > ul > li > .btn-bulky::after {
+    content: "\e114";
+    font-family: "Glyphicons Halflings";
+    font-size: 0.6em;
+    transition: rotate .3s ease-in-out;
+    rotate: 0deg;
+}
+.header-menu .il-mainbar-triggers > ul > li > .btn-bulky.engaged::after {
+    rotate: 180deg;
 }
 
 /* navbar */
@@ -185,7 +230,7 @@ header .metabar .icon {
 }
 .il-mainbar-slates {
     box-shadow: none;
-    background: var(--color-xxlight-blue);
+    background: var(--color-xxxlight-blue);
 }
 .il-maincontrols-slate .btn-bulky, .il-maincontrols-slate .link-bulky {
     background-color: transparent;
@@ -200,6 +245,9 @@ header .metabar .icon {
     display: none;
 }
 .il-mainbar-tools-entries-bg {
+    background-color: var(--color-xxxlight-blue);
+}
+.il-tree li.il-tree-node.highlighted > .node-line {
     background-color: var(--color-xxlight-blue);
 }
 .il-mainbar-tools-entries .btn-bulky .bulky-label, .il-mainbar-tools-entries .btn-bulky .bulky-label, .il-mainbar-tools-entries .il-link.link-bulky .bulky-label {
@@ -220,11 +268,13 @@ header .metabar .icon {
     display: none;
 }
 
+
 /* main page */
 .il-layout-page-content {
     padding: 30px;
     max-width: 1400px;
     margin: 0 auto;
+    min-height: 100svh;
 }
 
 .breadcrumbs {

@@ -3,8 +3,8 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
 <style type="text/css">
-	.st0{clip-path:url(#SVGID_00000017498979207429539120000016489852445266831250_);fill:#4C6586;}
-	.st1{fill:#4C6586;}
+	.st0{clip-path:url(#SVGID_00000017498979207429539120000016489852445266831250_);fill:#000091;}
+	.st1{fill:#000091;}
 	.st2{fill:none;}
 </style>
 <g>
@@ -15,7 +15,7 @@
 		<clipPath id="SVGID_00000155840720747292477050000018113212691037197700_">
 			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 		</clipPath>
-		<path style="clip-path:url(#SVGID_00000155840720747292477050000018113212691037197700_);fill:#4C6586;" d="M250,165H70V55h180
+		<path style="clip-path:url(#SVGID_00000155840720747292477050000018113212691037197700_);fill:#000091;" d="M250,165H70V55h180
 			V165z M265,170V50c0-5.5-4.5-10-10-10H65c-5.5,0-10,4.5-10,10v120c0,5.5,4.5,10,10,10h123c0.1,0.2,0.1,0.4,0.2,0.6L204,215h-68.6
 			l15.6,20h62.2l17.5,38.1c1.3,2.8,4,4.4,6.8,4.4c1,0,2.1-0.2,3.1-0.7c3.8-1.7,5.4-6.2,3.7-9.9L204.4,180H255
 			C260.5,180,265,175.5,265,170"/>
