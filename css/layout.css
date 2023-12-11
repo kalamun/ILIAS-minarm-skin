@@ -18,6 +18,7 @@ header.disabled {
     position: relative;
     height: auto;
     padding: 5px 15px;
+    z-index: 100;
 }
 
 .il-logo .rf-logo {
@@ -202,6 +203,12 @@ header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
 }
 .header-menu .il-mainbar-triggers > ul > li > .btn-bulky.engaged::after {
     rotate: 180deg;
+}
+.il-maincontrols-slate .btn-bulky.engaged::before,
+.il-maincontrols-slate .link-bulky.engaged::before,
+.il-maincontrols-slate .btn-bulky.disengaged::before,
+.il-maincontrols-slate .link-bulky.disengaged::before {
+    font-size: 0.5em;
 }
 
 /* navbar */

@@ -171,3 +171,27 @@ div.ilContainerListItemOuter {
     padding: 1.5em 15px;
 }
 
+
+/* page editor */
+#il_EditPage [data-copg-ed-type="add-area"] > .dropdown.open > ul.dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    translate: -50% 0;
+    left: 50%;
+    flex-wrap: wrap;
+}
+
+#il_EditPage [data-copg-ed-type="add-area"] > .dropdown.open > ul.dropdown-menu li {
+    flex: 1;
+    border-right: 1px solid var(--color-xlight-grey);
+    border-bottom: 1px solid var(--color-xlight-grey);
+    min-width: 100px;
+}
+#il_EditPage [data-copg-ed-type="add-area"] > .dropdown.open > ul.dropdown-menu li a {
+    display: block;
+    height: 100%;
+    white-space: normal;
+    text-align: center;
+    padding: 10px;
+}
