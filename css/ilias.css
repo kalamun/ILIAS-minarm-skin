@@ -170,6 +170,9 @@ td.std.small input {
 div.ilContainerListItemOuter {
     padding: 1.5em 15px;
 }
+div.ilContainerListItemIcon {
+    padding-right: 15px;
+}
 
 
 /* page editor */
@@ -195,3 +198,54 @@ div.ilContainerListItemOuter {
     text-align: center;
     padding: 10px;
 }
+
+
+/* cards */
+.ilContainerTileRows {
+    padding: 15px;
+}
+.il-deck .row > div {
+    padding: 15px;
+}
+.il-card {
+    border: 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+.il-card .il-card-image-container {
+    aspect-ratio: 10/6;
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+}
+.il-card .il-card-image-container img {
+    object-fit: cover;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.il-card .caption {
+    padding: 0 15px 15px;
+    font-size: var(--font-size-xsmall);
+}
+.il-card .caption.card-title {
+    font-size: var(--font-size-normal);
+    padding: 15px 15px 0 15px;
+}
+.il-card .caption.card-title a {
+    color: var(--color-black);
+    font-weight: bold;
+}
+.il-card.thumbnail::after {
+    content: '\e606';
+    font-family: 'il-icons';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 15px 15px 0;
+    color: var(--color-xdark-blue);
+}
+.il-card .il-card-repository-head {
+    background: transparent;
+}
+
