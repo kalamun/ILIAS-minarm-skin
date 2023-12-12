@@ -212,6 +212,11 @@ a:hover {
 a:visited {
 	color: var(--color-blue);
 }
+a:focus-visible {
+  position: relative;
+  outline: none;
+  outline-offset: 4px;
+}
 
 :is(h1, h2, h3, h4, h5, h6) :is(a, a:visited) {
 	color: inherit;

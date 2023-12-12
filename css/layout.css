@@ -21,7 +21,8 @@ header.disabled {
     z-index: 100;
 }
 
-.il-logo .rf-logo {
+.il-logo img.rf-logo,
+.il-logo img.custom-logo {
     width: auto;
     height: 100px;
 }
@@ -277,13 +278,45 @@ header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
 
 
 /* main page */
+
 .il-layout-page-content {
     padding: 30px;
     max-width: 1400px;
     margin: 0 auto;
     min-height: 100svh;
+    overflow: visible;
 }
+
+
+/* breadcrumbs */
 
 .breadcrumbs {
     box-shadow: none;
+}
+.breadcrumb_wrapper {
+    --breadcrumb-offset: 100px;
+    margin-left: calc(var(--breadcrumb-offset) * -1);
+    width: calc(100% + (var(--breadcrumb-offset) * 2));
+    margin-bottom: 20px;
+}
+.breadcrumb_wrapper .breadcrumb span.crumb a {
+    color: var(--color-grey);
+}
+.breadcrumb_wrapper .breadcrumb span.crumb a:focus {
+    border: 0;
+}
+.breadcrumb_wrapper .breadcrumb > span + span::before {
+    color: var(--color-grey);
+    padding: 0 1em;
+    font-size: 0.6em;
+    vertical-align: middle;
+    display: inline-block;
+}
+.with-mainbar-slates-engaged nav.breadcrumb_wrapper {
+    --breadcrumb-offset: 0;
+}
+@media only screen and (max-width: 1550px) {
+    nav.breadcrumb_wrapper {
+        --breadcrumb-offset: 0;
+    }
 }

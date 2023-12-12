@@ -18,14 +18,14 @@
 		{CSS_INLINE}
 	</style>
 
-	<link rel="stylesheet" type="text/css" href="{SKIN_URI}/css/default.css" />
-	<link rel="stylesheet" type="text/css" href="{SKIN_URI}/css/delos.css" />
-	<link rel="stylesheet" type="text/css" href="{SKIN_URI}/css/delos_cont.css" />
-	<link rel="stylesheet" type="text/css" href="{SKIN_URI}/css/init.css" />
-	<link rel="stylesheet" type="text/css" href="{SKIN_URI}/css/layout.css" />
-	<link rel="stylesheet" type="text/css" href="{SKIN_URI}/css/typography.css" />
-	<link rel="stylesheet" type="text/css" href="{SKIN_URI}/css/colorscheme.css" />
-	<link rel="stylesheet" type="text/css" href="{SKIN_URI}/css/ilias.css" />
+	<link rel="stylesheet" type="text/css" href="/Customizing/global/skin/minarm/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="/Customizing/global/skin/minarm/css/delos.css" />
+	<link rel="stylesheet" type="text/css" href="/Customizing/global/skin/minarm/css/delos_cont.css" />
+	<link rel="stylesheet" type="text/css" href="/Customizing/global/skin/minarm/css/init.css" />
+	<link rel="stylesheet" type="text/css" href="/Customizing/global/skin/minarm/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="/Customizing/global/skin/minarm/css/typography.css" />
+	<link rel="stylesheet" type="text/css" href="/Customizing/global/skin/minarm/css/colorscheme.css" />
+	<link rel="stylesheet" type="text/css" href="/Customizing/global/skin/minarm/css/ilias.css" />
 
 	<!-- BEGIN css_file -->
 	<link rel="stylesheet" type="text/css" href="{CSS_FILE}" />
@@ -39,7 +39,7 @@
 	<script type="text/javascript" src="{JS_FILE}"></script>
 	<!-- END js_file -->
 
-	<script type="text/javascript" src="{SKIN_URI}/js/dom.js"></script>
+	<script type="text/javascript" src="/Customizing/global/skin/minarm/js/dom.js"></script>
 </head>
 
 <body class="{BODY_CLASS}">
@@ -56,10 +56,13 @@
 			<div class="header-inner">
 				<div class="il-logo">
 					<span>
-						<img src="{SKIN_URI}/img/Logo_RF.svg" class="rf-logo" />	
+						<img src="/Customizing/global/skin/minarm/img/Logo_RF.svg" class="rf-logo" />	
+					</span>
+					<span class="custom-logo">
+						{LOGO}
 					</span>
 					<div class="il-pagetitle">
-						{TITLE}
+						{MAIN_TITLE}
 						<em>{SHORT_TITLE}</em>
 					</div>
 				</div>
@@ -85,6 +88,7 @@
 		<!-- html5 main-tag is not supported in IE / div is needed -->
 		<main class="il-layout-page-content">
 			<!-- BEGIN content_breadcrumbs -->
+			{BREADCRUMBS}
 			<!-- END content_breadcrumbs -->
 
 			{CONTENT}
