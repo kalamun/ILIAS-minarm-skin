@@ -10,7 +10,7 @@ Start at your ILIAS root directory
 ```bash
 mkdir -p Customizing/global/skin
 cd Customizing/global/skin
-git clone https://github.com/kalamun/ILIAS-MinArmSkin.git minarm
+git clone https://github.com/kalamun/ILIAS-minarm-skin.git minarm
 ```
 Assign the skin to a non-admin user.
 
