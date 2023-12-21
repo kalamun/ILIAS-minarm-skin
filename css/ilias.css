@@ -124,6 +124,14 @@ ul.dropdown-menu > li :is(a, .btn):hover {
     color: var(--color-xdark-blue);
 }
 
+.ilFileUploadDropAlternative img {
+    width: 1.5em;
+}
+.ilFileUploadDropAlternative img a {
+    border: 2px solid var(--color-xdark-blue);
+    color: var(--color-xdark-blue);
+}
+
 
 /* tables */
 
