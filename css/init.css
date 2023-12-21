@@ -82,9 +82,10 @@ input[type]:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not(
 	cursor: text;
 }
 
-.form-control {
+.form-control, input, select, textarea,
+body .yui-skin-sam .yui-button {
   height: auto;
-  padding: 9px 9px;
+  padding: 6px 9px;
   font-size: 1em;
   color: var(--color-black);
   border: 1px solid var(--color-xxlight-blue);
@@ -96,4 +97,27 @@ input[type]:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not(
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: 3px solid var(--color-xxlight-blue);
+}
+
+/* color picker */
+body .yui-skin-sam .yui-button {
+	padding: 0;
+}
+body .yui-skin-sam .yui-button .first-child {
+	border: 0;
+}
+body .yui-skin-sam .yui-button button,
+body .yui-skin-sam .yui-button a,
+body .yui-skin-sam .yui-button a:visited {
+	padding: 0 15px 0 0;
+	font-size: 1em;
+  position: relative;
+  min-width: 3em;
+}
+body .yui-skin-sam .yui-button button em {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 15px;
+	bottom: 0;
 }

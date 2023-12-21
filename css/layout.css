@@ -25,6 +25,7 @@ header.disabled {
 .il-logo img.custom-logo {
     width: auto;
     height: 100px;
+    padding: 8px;
 }
 
 .il-pagetitle {
