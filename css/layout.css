@@ -5,6 +5,7 @@ body {
 .il-layout-page {
     grid-template-rows: auto auto 1fr;
     overflow: visible;
+    overflow-x: hidden;
     height: auto;
 }
 
