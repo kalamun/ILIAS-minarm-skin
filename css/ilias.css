@@ -159,6 +159,18 @@ td.std.small input {
     max-width: 3em;
 }
 
+/* media container */
+
+.ilc_media_cont_MediaContainer {
+    display: block;
+}
+.ilc_media_cont_MediaContainer .ilc_Mob,
+.ilc_media_cont_MediaContainer .ilc_Mob img {
+    max-width: 100%;
+}
+
+
+
 /* other */
 
 #il_center_col .panel,
@@ -269,3 +281,9 @@ div.ilContainerListItemIcon {
     background: transparent;
 }
 
+
+/* caledar */
+
+table.calmini td.calminitoday {
+    background-color: var(--color-dark-blue);
+}
