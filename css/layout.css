@@ -310,6 +310,95 @@ header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
 }
 
 
+/* login page */
+
+body.is_login .il-layout-page-content {
+    min-height: 80svh;
+}
+.ilLogin_wrapper {
+    display: flex;
+    width: 100svw;
+    translate: -50% 0;
+    position: relative;
+    left: 50%;
+    top: -80px;
+    margin-bottom: -80px;
+    gap: 3rem;
+    min-height: 80svh;
+}
+.ilLogin_wrapper > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.ilLogin_wrapper .ilLogin_thumbnail.hidden {
+    max-width: 0;
+}
+.ilLogin_wrapper img.login-thumbnail {
+    height: 100%;
+    object-fit: cover;
+}
+body.is_login div.ilAdminRow {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+div.ilStartupSection form.form-horizontal .ilFormHeader {
+    background: transparent;
+}
+div.ilStartupSection form.form-horizontal {
+    border: 0;
+    width: 100%;
+    max-width: 40rem;
+    min-width: 350px;
+}
+
+div.ilStartupSection form[name="formlogin"] .form-group > * {
+    float: none;
+    width: 100%;
+}
+div.ilStartupSection form[name="formlogin"] .form-group label {
+    font-size: var(--font-size-xsmall);
+}
+div.ilStartupSection form[name="formlogin"] :is(.ilFormRequired, .asterisk) {
+    visibility: hidden;
+}
+div.ilStartupSection form[name="formlogin"] :is(.ilFormHeader, .ilFormFooter, .form-group > *) {
+    padding-left: 0;
+    padding-right: 0;
+}
+div.ilStartupSection :is(a.il_ContainerItemCommand2:link, a.il_ContainerItemCommand2:visited, a.il_ContainerItemCommand:link, a.il_ContainerItemCommand:visited) {
+    font-size: var(--font-size-xxsmall);
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+div.ilStartupSection input:is([type="text"], [type="password"]) {
+    border: 0;
+    border-bottom: 3px solid var(--color-xdark-blue);
+    border-radius: 0;
+    background: var(--color-xxxlight-grey);
+}
+
+@media (max-width: 768px) {
+    .ilLogin_wrapper {
+        flex-direction: column;
+    }
+    .ilLogin_wrapper .ilLogin_thumbnail.visible {
+        max-height: 200px;
+    }
+    .ilLogin_wrapper img.login-thumbnail {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+
 /* main page */
 
 .il-layout-page-content {
