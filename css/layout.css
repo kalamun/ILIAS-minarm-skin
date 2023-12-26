@@ -22,6 +22,9 @@ header.disabled {
     z-index: 100;
 }
 
+.il-logo {
+    height: auto;
+}
 .il-logo img.rf-logo,
 .il-logo img.custom-logo {
     width: auto;
