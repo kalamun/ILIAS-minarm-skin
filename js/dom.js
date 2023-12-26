@@ -3,6 +3,8 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function initMenu() {
+    if (window.innerWidth <= 766) return;
+
     for ( const element of document.querySelectorAll('.il-mainbar .dci-mainbar-li-submenu a.il-link.link-bulky')) {
         element.parentNode.removeChild(element);
     }
@@ -47,8 +49,8 @@ function initSlates() {
 /*         document.querySelector('header')?.classList.add('disabled');        
         document.querySelector('.copg-top-actions button')?.classList.remove('btn-default').add('btn-primary');        
  */
-} else {
-}
+    }
+
     window.addEventListener('click', closeAllOpenMenu, true);
     persistToolBar();
 }

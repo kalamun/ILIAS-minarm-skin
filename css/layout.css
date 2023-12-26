@@ -29,6 +29,12 @@ header.disabled {
     padding: 8px;
 }
 
+@media only screen and (max-width: 768px) {
+    .il-logo {
+      width: auto;
+    }
+}
+
 .il-pagetitle {
     flex-direction: column;
     align-items: flex-start;
@@ -113,6 +119,31 @@ header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
     border-top-left-radius: var(--border-radius-large);
     padding: 0.3em 1em;
 }
+
+@media (max-width: 768px) {
+    .header-inner li.search #mm_search_form .input-group {
+        width: 3em;
+    }
+    .header-inner li.search #mm_search_form > .input-group input {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        min-width: 3em;
+        height: 100%;
+        opacity: 0;
+        z-index: 10;
+        cursor: pointer;
+        transition: opacity 0.1s ease-in-out 0s, right 0.5s ease-in-out 0.5s;
+    }
+    .header-inner li.search #mm_search_form > .input-group input:focus {
+        transition: opacity 0.3s ease-in-out 0.5s, right 0.1s ease-in-out 0s;
+        opacity: 1;
+        right: 100%;
+        min-width: 200px;
+        cursor: text;
+    }
+}
+
 
 .il-avatar.il-avatar-letter {
     background-color: var(--color-xdark-blue) !important;
