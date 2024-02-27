@@ -15,6 +15,9 @@
     display: inline-block;
     float: none;
 }
+.nav-tabs > li > a {
+    color: var(--color-dark-blue);
+}
 .nav-tabs > li.active > :is(a, a:hover, a:focus) {
     background-color: var(--color-xxxlight-blue);
     color: var(--color-xdark-blue);
@@ -216,6 +219,7 @@ div.ilContainerListItemIcon {
 
 
 /* page editor */
+/*
 #il_EditPage [data-copg-ed-type="add-area"] > .dropdown.open > ul.dropdown-menu {
     display: flex;
     flex-direction: row;
@@ -238,7 +242,7 @@ div.ilContainerListItemIcon {
     text-align: center;
     padding: 10px;
 }
-
+ */
 
 /* cards */
 .ilContainerTileRows {
@@ -253,7 +257,7 @@ div.ilContainerListItemIcon {
     border-radius: var(--border-radius);
 }
 .il-card .il-card-image-container {
-    aspect-ratio: 10/6;
+    aspect-ratio: 1/1;
     height: auto;
     overflow: hidden;
     padding: 0;

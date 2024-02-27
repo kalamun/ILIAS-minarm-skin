@@ -168,6 +168,7 @@ header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
 .il-avatar.il-avatar-letter span.abbreviation {
     text-transform: uppercase;
     top: 0;
+    font-size: var(--font-size-xsmall);
 }
 .il-avatar + .bulky-label {
     display: none;
@@ -251,6 +252,9 @@ header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
 body.menu-vertical .il-maincontrols-mainbar {
     background: var(--color-xxlight-grey);
     grid-template-columns: auto 100%;
+    position: sticky;
+    top: 0;
+    height: 100svh;
 }
 body.menu-vertical .il-mainbar-slates {
     width: 329px;
@@ -261,6 +265,17 @@ body.menu-vertical .il-mainbar-tools-button .btn-bulky, .il-mainbar-tools-button
 body.menu-vertical .il-mainbar-tools-button .btn-bulky .icon, .il-mainbar-tools-button .btn-bulky.engaged .icon {
     filter: invert();
 }
+body.menu-vertical .il-maincontrols-slate :is(.btn-bulky:hover, .link-bulky:hover, .btn-bulky.engaged, .link-bulky.engaged) {
+    background: var(--color-xxlight-blue);
+}
+
+body.menu-vertical .nav.il-maincontrols {
+    position: relative;
+}
+body.menu-vertical .il-layout-page {
+    overflow-x: clip;
+}
+
 
 /* navbar */
 .il-mainbar-triggers {
@@ -426,13 +441,17 @@ div.ilStartupSection input:is([type="text"], [type="password"]) {
     overflow: visible;
 }
 
+#ilContentContainer img {
+    max-width: 100% !important;
+}
+
 
 /* breadcrumbs */
 
 .breadcrumbs {
     box-shadow: none;
 }
-.breadcrumb_wrapper {
+body.menu-horizontal .breadcrumb_wrapper {
     --breadcrumb-offset: 100px;
     margin-left: calc(var(--breadcrumb-offset) * -1);
     width: calc(100% + (var(--breadcrumb-offset) * 2));

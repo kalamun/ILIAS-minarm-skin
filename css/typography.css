@@ -182,8 +182,8 @@ body {
 	--font-size-normal: 1rem;
 	--font-size-large: 1.2rem;
 	--font-size-xlarge: 1.4rem;
-	--font-size-xxlarge: 1.75rem;
-	--font-size-xxxlarge: 2rem;
+	--font-size-xxlarge: 1.6rem;
+	--font-size-xxxlarge: 1.8rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -238,7 +238,7 @@ a:hover {
 	text-decoration: underline !important;
 }
 a:visited {
-	color: var(--color-blue);
+	color: var(--color-dark-blue);
 }
 a:focus-visible {
   position: relative;
