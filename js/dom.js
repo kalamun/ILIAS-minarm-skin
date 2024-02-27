@@ -5,12 +5,12 @@ window.addEventListener("DOMContentLoaded", () => {
 function initMenu() {
     if (window.innerWidth <= 766) return;
 
-    for ( const element of document.querySelectorAll('.il-mainbar .dci-mainbar-li-submenu a.il-link.link-bulky')) {
+    for ( const element of document.querySelectorAll('.il-mainbar .minarm-mainbar-li-submenu a.il-link.link-bulky')) {
         element.parentNode.removeChild(element);
     }
 
     const mainbar = document.querySelector('.il-mainbar');
-    const headerMenu = document.querySelector('.header-menu');
+    const headerMenu = document.querySelector('.header-menu.orientation-horizontal');
     if (headerMenu && mainbar) {
         headerMenu.appendChild(mainbar);
     }
@@ -20,6 +20,8 @@ function initMenu() {
 
 let initSlatesAttempts = 0;
 function initSlates() {
+    if (!document.querySelector('.header-menu.orientation-horizontal')) return false;
+
     const mainbar = document.querySelector('.il-mainbar');
     if (!mainbar.querySelector('button[aria-controls]')) {
         initSlatesAttempts++;

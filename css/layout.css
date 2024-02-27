@@ -248,6 +248,20 @@ header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
     font-size: 0.5em;
 }
 
+body.menu-vertical .il-maincontrols-mainbar {
+    background: var(--color-xxlight-grey);
+    grid-template-columns: auto 100%;
+}
+body.menu-vertical .il-mainbar-slates {
+    width: 329px;
+}
+body.menu-vertical .il-mainbar-tools-button .btn-bulky, .il-mainbar-tools-button .btn-bulky.engaged {
+    background: var(--color-xdark-blue);
+}
+body.menu-vertical .il-mainbar-tools-button .btn-bulky .icon, .il-mainbar-tools-button .btn-bulky.engaged .icon {
+    filter: invert();
+}
+
 /* navbar */
 .il-mainbar-triggers {
     position: sticky !important;
