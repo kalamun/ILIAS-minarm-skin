@@ -9,7 +9,7 @@
     background: var(--color-xxxlight-blue);
     border-radius: var(--border-radius);
     display: flex;
-    width: 100%;
+    width: calc(100% - 30px);
 }
 .nav-tabs > li {
     display: inline-block;
@@ -95,7 +95,7 @@ ul.dropdown-menu > li :is(a, .btn):hover {
   padding: 0.5em 1em;
   border: 2px solid;
 }
-.btn-default {
+.btn-default, .btn-bulky {
   background: transparent !important;
   color: var(--color-xdark-blue) !important;
   border-color: var(--color-xdark-blue) !important;

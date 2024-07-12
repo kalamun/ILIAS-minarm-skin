@@ -36,6 +36,9 @@ header.disabled {
     .il-logo {
       width: auto;
     }
+    .il-logo img.rf-logo, .il-logo img.custom-logo {
+        height: 45px;
+    }
 }
 
 .il-pagetitle {
@@ -92,6 +95,9 @@ header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
 .header-inner li.search :is(#ilMMSearchMenu, #mm_search_menu_ac) {
     display: none;
 }
+.header-inner .il-maincontrols-metabar form#mm_search_form {
+    padding: 0;
+}
 .header-inner li.search #mm_search_form .input-group {
     display: flex;
     flex-direction: row;
@@ -144,6 +150,9 @@ header .il-maincontrols-metabar .il-metabar-slates .il-maincontrols-slate {
         right: 100%;
         min-width: 200px;
         cursor: text;
+    }
+    .il-maincontrols-metabar {
+        margin: 0;
     }
 }
 
@@ -266,7 +275,7 @@ body.menu-vertical .il-mainbar-tools-button .btn-bulky .icon, .il-mainbar-tools-
     filter: invert();
 }
 body.menu-vertical .il-maincontrols-slate :is(.btn-bulky:hover, .link-bulky:hover, .btn-bulky.engaged, .link-bulky.engaged) {
-    background: var(--color-xxlight-blue);
+    background: var(--color-xxlight-blue) !important;
 }
 
 body.menu-vertical .nav.il-maincontrols {
@@ -274,6 +283,75 @@ body.menu-vertical .nav.il-maincontrols {
 }
 body.menu-vertical .il-layout-page {
     overflow-x: clip;
+}
+
+body.menu-vertical .il-mainbar-triggers .btn-bulky,
+body.menu-vertical .il-mainbar-triggers .il-link.link-bulky {
+    border-bottom: 1px solid #dddddd !important;
+}
+
+@media (max-width: 768px) {
+    .il-layout-page.with-mainbar-slates-engaged .nav.il-maincontrols {
+        z-index: 1000;
+        height: 100svh;
+    }
+    .nav.il-maincontrols {
+        position: fixed !important;
+    }
+    body.menu-vertical .il-maincontrols-mainbar {
+        height: auto;
+    }
+}
+
+
+body.menu-horizontal .il-maincontrols-slate-content header.show-title {
+    display: none;
+}
+body.menu-horizontal .il-maincontrols-slate-content .il-drilldown > ul > li > button.menulevel {
+    display: none;
+}
+body.menu-horizontal .il-drilldown li > .menulevel, .il-drilldown li > .btn-bulky,
+body.menu-horizontal .il-drilldown li > .link-bulky, .il-drilldown li > hr {
+    display: inherit;
+}
+body.menu-horizontal .header-menu .il-mainbar-entries li {
+    position: relative;
+    margin: 0;
+    align-items: center;
+    display: flex;
+}
+body.menu-horizontal .il-maincontrols-slate-content .il-drilldown ul {
+    width: 100%;
+}
+body.menu-horizontal .il-maincontrols-slate-content .il-drilldown > ul > li > ul > li > button.menulevel > .glyphicon {
+    font-size: var(--font-size-xxxsmall);
+}
+body.menu-horizontal .il-maincontrols-slate-content .il-drilldown > ul > li > ul > li > button.menulevel.engaged {
+    color: var(--color-xdark-blue);
+    background: var(--color-xxxlight-blue) !important;
+}
+body.menu-horizontal .il-maincontrols-slate-content .il-drilldown > ul > li > ul > li > button.menulevel.engaged + ul,
+body.menu-horizontal .il-maincontrols-slate-content > ul > li > .il-maincontrols-slate.engaged {
+    display: block !important;
+}
+body.menu-horizontal .il-maincontrols-slate-content .il-drilldown > ul > li > ul > li > ul,
+body.menu-horizontal .il-maincontrols-slate-content > ul > li > .il-maincontrols-slate {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    background: var(--color-white);
+    display: none;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
+}
+body.menu-horizontal .il-maincontrols-slate-content .il-drilldown > ul > li > ul > li > ul a {
+    padding: 8px 15px !important;
+    justify-content: flex-start;
+    min-height: 0;
+}
+body.menu-horizontal .il-maincontrols-slate-content .il-drilldown > ul > li > ul > li > ul a span {
+    text-align: left !important;
 }
 
 
@@ -294,6 +372,7 @@ body.menu-vertical .il-layout-page {
 }
 .il-mainbar-triggers :is(.btn-bulky, .il-link.link-bulky, .btn-bulky:hover, .il-link.link-bulky:hover) {
     background: transparent;
+    text-decoration: none !important;
     color: var(--color-black);
 }
 .il-mainbar-triggers :is(.btn-bulky, .il-link.link-bulky, .btn-bulky:hover, .il-link.link-bulky:hover) .bulky-label {
@@ -310,6 +389,9 @@ body.menu-vertical .il-layout-page {
     margin-bottom: 0;
     color: var(--color-black);
     border-bottom: 1px solid var(--color-xlight-blue);
+}
+body.menu-vertical .il-maincontrols-slate .btn-bulky, .il-maincontrols-slate .link-bulky {
+    border-bottom: none;
 }
 .il-maincontrols-mainbar {
     grid-template-columns: 0 100%;
@@ -339,6 +421,9 @@ body.menu-vertical .il-layout-page {
 .nav.il-maincontrols.disengaged :is(.il-layout-page.with-mainbar-slates-engaged, .il-maincontrols-mainbar) {
     width: 0;
     display: none;
+}
+.il-drilldown .menulevel {
+    background: transparent;
 }
 
 
@@ -441,6 +526,12 @@ div.ilStartupSection input:is([type="text"], [type="password"]) {
     overflow: visible;
 }
 
+@media (max-width: 768px) {
+    .il-layout-page-content {
+        padding: 10px;
+    }
+}
+
 #ilContentContainer img {
     max-width: 100% !important;
 }
@@ -473,8 +564,8 @@ body.menu-horizontal .breadcrumb_wrapper {
 .with-mainbar-slates-engaged nav.breadcrumb_wrapper {
     --breadcrumb-offset: 0;
 }
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1650px) {
     nav.breadcrumb_wrapper {
-        --breadcrumb-offset: 0;
+        --breadcrumb-offset: 0 !important;
     }
 }

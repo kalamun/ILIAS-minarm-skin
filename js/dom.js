@@ -37,6 +37,18 @@ function initSlates() {
         }
     });
 
+    for (const button of mainbar.querySelectorAll('body.menu-horizontal .il-drilldown li > .menulevel, .il-drilldown li > .btn-bulky')) {
+        button.classList.add('submenu-title');
+/*
+        const buttonClone = button.cloneNode(true);
+        button.replaceWith(buttonClone);
+        buttonClone.addEventListener('click', (e) => {
+            e.stopPropagation();
+            buttonClone.classList.toggle('engaged');
+        });
+*/
+    }
+
     const toolsDisengaged = document.querySelector('.il-mainbar-tools-entries.disengaged');
     if (toolsDisengaged) {
         toolsDisengaged.parentNode.removeChild(toolsDisengaged);
@@ -47,7 +59,7 @@ function initSlates() {
     if (closeSlates) closeSlates.parentNode.removeChild(closeSlates);
 
     
-    if (document.querySelector('header .il-mainbar-tools-button')) {
+    if (document.querySelector('.header-menu .il-mainbar-tools-button')) {
 /*         document.querySelector('header')?.classList.add('disabled');        
         document.querySelector('.copg-top-actions button')?.classList.remove('btn-default').add('btn-primary');        
  */
@@ -57,15 +69,17 @@ function initSlates() {
     persistToolBar();
 }
 
-function closeAllOpenMenu() {
-    document.querySelectorAll('header li > .btn.engaged').forEach(button => button.click());
+function closeAllOpenMenu(e) {
+    document.querySelectorAll('.header-menu .submenu-title.engaged').forEach(button => button !== e.target && button.classList.remove('engaged'));
+
+    if (e.target?.classList.contains('submenu-title')) return;
+    document.querySelectorAll('.header-menu li > .btn.engaged').forEach(button => button.click());
     persistToolBar();
 }
 
 function persistToolBar() {
     const tools = document.querySelector('.nav.il-maincontrols .il-maincontrols-slate.disengaged');
     if (tools) {
-        console.log({tools});
         tools?.classList.remove('disengaged');
         tools?.classList.add('engaged');
         const toolsWrapper = document.querySelector('.nav.il-maincontrols.disengaged');
