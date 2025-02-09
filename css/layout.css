@@ -274,7 +274,7 @@ body.menu-vertical .il-mainbar-tools-button .btn-bulky, .il-mainbar-tools-button
 body.menu-vertical .il-mainbar-tools-button .btn-bulky .icon, .il-mainbar-tools-button .btn-bulky.engaged .icon {
     filter: invert();
 }
-body.menu-vertical .il-maincontrols-slate :is(.btn-bulky:hover, .link-bulky:hover, .btn-bulky.engaged, .link-bulky.engaged) {
+body.menu-vertical .il-maincontrols-slate :not(.backnav) > :is(.btn-bulky:hover, .link-bulky:hover, .btn-bulky.engaged, .link-bulky.engaged) {
     background: var(--color-xxlight-blue) !important;
 }
 
@@ -520,6 +520,7 @@ div.ilStartupSection input:is([type="text"], [type="password"]) {
 
 .il-layout-page-content {
     padding: 30px;
+    width: 100%;
     max-width: 1500px;
     margin: 0 auto;
     min-height: 100svh;
