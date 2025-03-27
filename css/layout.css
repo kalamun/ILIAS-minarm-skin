@@ -30,6 +30,7 @@ header.disabled {
     width: auto;
     height: 100px;
     padding: 8px;
+    object-fit: contain;
 }
 
 @media only screen and (max-width: 768px) {
