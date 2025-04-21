@@ -4,18 +4,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function initMenu() {
     if (window.innerWidth <= 766) return;
-
+    if (document.querySelector('body.mindef-style-loaded')) return false;
+    
     for ( const element of document.querySelectorAll('.il-mainbar .minarm-mainbar-li-submenu a.il-link.link-bulky')) {
         element.parentNode.removeChild(element);
     }
-
+    
     const mainbar = document.querySelector('.il-mainbar');
     const headerMenu = document.querySelector('.header-menu.orientation-horizontal');
     if (headerMenu && mainbar) {
         headerMenu.appendChild(mainbar);
     }
-
+    
     initSlates();
+    setTimeout(() => document.body.classList.add('mindef-style-loaded'), 500);
 }
 
 let initSlatesAttempts = 0;
@@ -39,14 +41,6 @@ function initSlates() {
 
     for (const button of mainbar.querySelectorAll('body.menu-horizontal .il-drilldown li > .menulevel, .il-drilldown li > .btn-bulky')) {
         button.classList.add('submenu-title');
-/*
-        const buttonClone = button.cloneNode(true);
-        button.replaceWith(buttonClone);
-        buttonClone.addEventListener('click', (e) => {
-            e.stopPropagation();
-            buttonClone.classList.toggle('engaged');
-        });
-*/
     }
 
     const toolsDisengaged = document.querySelector('.il-mainbar-tools-entries.disengaged');
@@ -58,22 +52,19 @@ function initSlates() {
     const closeSlates = document.querySelector('.il-mainbar-close-slates');
     if (closeSlates) closeSlates.parentNode.removeChild(closeSlates);
 
-    
-    if (document.querySelector('.header-menu .il-mainbar-tools-button')) {
-/*         document.querySelector('header')?.classList.add('disabled');        
-        document.querySelector('.copg-top-actions button')?.classList.remove('btn-default').add('btn-primary');        
- */
-    }
-
     window.addEventListener('click', closeAllOpenMenu, true);
     persistToolBar();
 }
 
-function closeAllOpenMenu(e) {
-    document.querySelectorAll('.header-menu .submenu-title.engaged').forEach(button => button !== e.target && button.classList.remove('engaged'));
+async function closeAllOpenMenu(e) {
+    if (e.target?.tagName === "BUTTON") return;
 
-    if (e.target?.classList.contains('submenu-title')) return;
-    document.querySelectorAll('.header-menu li > .btn.engaged').forEach(button => button.click());
+    if(il?.UI?.maincontrols?.mainbar?.propagation_stopped) {
+        il.UI.maincontrols.mainbar.propagation_stopped = false;
+    }
+    il?.UI?.maincontrols?.mainbar?.disengageAll();
+    il?.UI?.maincontrols?.mainbar?.clearStates();
+
     persistToolBar();
 }
 
